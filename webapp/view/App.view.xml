@@ -1,0 +1,71 @@
+<mvc:View xmlns:core="sap.ui.core" controllerName="fiorielipoapp.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:tnt="sap.tnt"
+    xmlns="sap.m">
+    <App id="app">
+    <tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader id="_IDGenToolHeader1">
+				<Button
+					id="sideNavigationToggleButton"
+					type="Transparent"
+					press=".onSideNavButtonPress"
+					>
+					<layoutData>
+						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow" />
+					</layoutData>
+				</Button>
+                <!-- <ToolbarSpacer id="_IDGenToolbarSpacer1">
+					<layoutData>
+						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData2" priority="NeverOverflow" minWidth="20px" />
+					</layoutData>
+				</ToolbarSpacer>
+                <Button id="_IDGenButton1" text="Admin" type="Transparent" press=".handleUserNamePress" ariaHasPopup="Menu">
+					<layoutData>
+						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData3" priority="NeverOverflow" />
+					</layoutData>
+				</Button> -->
+			</tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+			<tnt:SideNavigation id="_IDGenSideNavigation1"
+				expanded="true"
+				selectedKey="{/selectedKey}"
+				itemSelect=".onItemSelect">
+				<tnt:NavigationList id="_IDGenNavigationList1" items="{path: '/navigation'}">
+					<tnt:NavigationListItem id="_IDGenNavigationListItem1"
+						text="{title}"
+						icon="{icon}"
+						enabled="{enabled}"
+						expanded="{expanded}"
+						items="{items}"
+						key="{key}">
+						<tnt:NavigationListItem id="_IDGenNavigationListItem2"
+							text="{title}"
+							key="{key}"
+							enabled="{enabled}" />
+					</tnt:NavigationListItem>
+				</tnt:NavigationList>
+				<tnt:fixedItem>
+					<tnt:NavigationList id="_IDGenNavigationList2" items="{path: '/fixedNavigation'}">
+						<tnt:NavigationListItem id="_IDGenNavigationListItem3" text="{title}" icon="{icon}" />
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+        <tnt:mainContents>
+			<NavContainer id="pageContainer" initialPage="Overview">
+			<!-- <ScrollContainer id="contianer">
+            <Page id="page"> -->
+			<!-- <content>
+			<core:ComponentContainer id="Overview" async="true" binding="{/capApplication}" propagateModel="true"></core:ComponentContainer>
+			</content> -->
+				 <core:HTML id="html" content='&lt;iframe id="myIframe" width="100%" height="100%" src="https://provider-oxb1v9j3.launchpad.cfapps.us20.hana.ondemand.com/3118803e-2b22-48d3-98ad-06f32b6f0304.mgdappreport.ovoverview-0.0.1/index.html" frameborder="0" allowFullScreen="true"&gt;&lt;/iframe&gt;'></core:HTML>
+			<!-- </Page>
+			</ScrollContainer> -->
+        </NavContainer>
+		</tnt:mainContents>
+    	</tnt:ToolPage>
+        
+</App>
+</mvc:View>

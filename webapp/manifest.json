@@ -1,0 +1,215 @@
+{
+  "_version": "1.49.0",
+  "sap.app": {
+    "id": "fiorielipoapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.11.1",
+      "toolsId": "00c8c990-1dbe-46e0-ab8a-3e94c04a22bc"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "fiorielipoapp-display": {
+          "semanticObject": "fiorielipoapp",
+          "action": "display",
+          "title": "{{flpTitle}}",
+          "subTitle": "{{flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      },
+      "outbounds": {
+        "VersionVersion-display":{
+          "semanticObject":"VersionVersion",
+          "action": "display",
+          "parameters": {}
+        },
+        "Email_deploy-display":{
+          "semanticObject": "Email_deploy",
+          "action": "display",
+          "parameters": {}
+
+        },
+        "ovoverview-display":{
+          "semanticObject": "ovoverview",
+          "action": "display",
+          "parameters": {}
+        },
+        "liabilityreportsob-display":{
+          "semanticObject": "liabilityreportsob",
+          "action": "display",
+          "parameters": {}
+        },
+        "sett_ingss-display":{
+          "semanticObject": "sett_ingss",
+          "action": "display",
+          "parameters": {}
+        },
+        "Po_cockpit_deploy-display":{
+          "semanticObject": "Po_cockpit_deploy",
+          "action": "display",
+          "parameters": {}
+        },
+        "mastereliposo-display":{
+          "semanticObject":"mastereliposo",
+          "action":"display",
+          "parameters":{}
+        },
+        "supplierelipodh-display":{
+          "semanticObject": "supplierelipodh",
+          "action": "display",
+          "parameters": {}
+        },
+        "Track_PO-display":{
+          "semanticObject": "Track_PO",
+          "action": "display",
+          "parameters": {}
+        },
+        "agingreportsob-display":{
+          "semanticObject": "agingreportsob",
+          "action": "display",
+          "parameters": {}
+        },
+        "invoiceassignmentinvoice-display":{
+          "semanticObject":"invoiceassignmentinvoice",
+          "action": "display",
+          "parameters": {}
+        },
+        "WorkflowTask-DisplayMyInbox":{
+          "semanticObject": "WorkflowTask",
+          "action": "DisplayMyInbox",
+          "parameters": {}
+        },
+        "productivityreportso-display":{
+          "semanticObject": "productivityreportso",
+          "action": "display",
+          "parameters": {}
+        },
+        "keyprocessanalyreportso-display":{
+          "semanticObject": "keyprocessanalyreportso",
+          "action": "display",
+          "parameters": {}
+        },
+        "invoicesumreportso-display":{
+          "semanticObject": "invoicesumreportso",
+          "action": "display",
+          "parameters": {}
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.118.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {},
+        "sap.tnt":{}
+      },
+      "components": {
+        "reusetest":{
+          "lazy": true
+        }
+      }
+    },
+    "componentUsages": {
+      "Overview":{
+        "name": "reusetest",
+        "lazy": true,
+        "settings":{},
+        "componentData":{}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "fiorielipoapp.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "fiorielipoapp.view",
+        "controlAggregation": "pages",
+        "controlId": "FirstView",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteApp",
+          "pattern": ":?query:",
+          "target": [
+            "TargetApp"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetApp": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "App",
+          "viewName": "App"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "fiorielipoapp.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "fiorielipoapp"
+  }
+}
